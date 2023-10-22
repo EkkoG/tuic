@@ -9,9 +9,9 @@ on:
   push:
     branches: [ "dev" ]
     # Publish semver tags as releases.
-    tags: [ 'v*' ]
+    tags: [ 'tuic-server-*' ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 env:
   # Use docker.io for Docker Hub if empty
