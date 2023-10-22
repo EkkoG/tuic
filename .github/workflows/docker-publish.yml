@@ -60,7 +60,7 @@ jobs:
         run: |
           tags=
           if [[ -z "${{ github.event.inputs.tag }}" ]]; then
-            tags=${{ env.registry }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
+            tags=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
           else
             repo_tag_version=$(echo ${{ github.event.inputs.tag }} | cut -d'-' -f3)
             tags=${{ env.registry }}/${{ env.IMAGE_NAME }}:$repo_tag_version
