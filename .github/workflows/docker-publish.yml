@@ -67,7 +67,7 @@ jobs:
             # add latest tag, with new line
             tags="$tags\n${{ env.registry }}/${{ env.IMAGE_NAME }}:latest"
           fi
-          echo "tags=$tags" >> $GITHUB_ENV
+          echo "tags=$tags" >> $GITHUB_OUTPUT
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
